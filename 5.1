@@ -1,0 +1,16 @@
+num = 0
+tot = 0.0
+while True :
+    sval = input ('entera number:')
+    if sval == 'done' :
+        break
+    try:
+        favl = float(sval)
+    except:
+        print('Invalid input')
+        continue
+    #print(favl)
+    num = num + 1
+    tot = tot + favl
+
+print(tot, num, tot/num)

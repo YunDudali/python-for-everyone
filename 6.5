@@ -1,0 +1,8 @@
+text = "X-DSPAM-Confidence:    0.8475"
+atpos = text. find('0')
+#print(atpos)
+btpos = text.find('5')
+#print(btpos)
+ctpos = text[atpos:btpos+1]
+dtpos = float(ctpos)
+print(dtpos)

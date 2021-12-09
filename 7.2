@@ -1,0 +1,15 @@
+fname = input("Enter file name: ")
+fh = open(fname)
+n = 0
+s = 0
+for line in fh:
+    if not line.startswith("X-DSPAM-Confidence:"):
+        continue
+    ly = line.strip()
+    a = ly[ly.find('0') : ]
+    s1 = float(a)
+    s = s + s1
+    n = n+1
+
+mean = s/n
+print("Average spam confidence:", mean)
